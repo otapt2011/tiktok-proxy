@@ -19,12 +19,10 @@ export default async function handler(req, res) {
       username: userInfo.user.uniqueId,
       display_name: userInfo.user.nickname,
       avatar_url: userInfo.user.avatarLarger || userInfo.user.avatarMedium,
-      verified: userInfo.user.verified,
       followers: userInfo.stats.followerCount,
       following: userInfo.stats.followingCount,
       total_likes: userInfo.stats.heartCount,
-      total_videos: userInfo.stats.videoCount,
-      bio: userInfo.user.signature || ''
+      total_videos: userInfo.stats.videoCount
     };
     res.status(200).json(profile);
   } catch (err) {
