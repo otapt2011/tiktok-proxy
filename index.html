@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TikTok Proxy API – Endpoints</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+        .card {
+            max-width: 800px;
+            width: 100%;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 2rem;
+            padding: 2rem;
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        h1 {
+            font-size: 2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #25F4EE, #FE2C55);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 0.5rem;
+        }
+        .sub {
+            color: #94a3b8;
+            margin-bottom: 2rem;
+            border-left: 3px solid #FE2C55;
+            padding-left: 1rem;
+        }
+        .endpoint {
+            background: #0f172a;
+            border-radius: 1rem;
+            padding: 1.2rem;
+            margin-bottom: 1.2rem;
+            border-left: 4px solid #25F4EE;
+        }
+        .endpoint h2 {
+            color: #f1f5f9;
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+        .url {
+            background: #1e293b;
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+            font-family: monospace;
+            font-size: 0.9rem;
+            color: #7dd3fc;
+            word-break: break-all;
+            margin: 0.5rem 0;
+        }
+        .badge {
+            display: inline-block;
+            background: #FE2C55;
+            color: white;
+            font-size: 0.7rem;
+            padding: 0.2rem 0.6rem;
+            border-radius: 999px;
+            font-weight: 600;
+        }
+        .method {
+            background: #25F4EE;
+            color: #0f172a;
+        }
+        p, li {
+            color: #cbd5e1;
+            line-height: 1.5;
+        }
+        code {
+            background: #1e293b;
+            padding: 0.2rem 0.4rem;
+            border-radius: 0.3rem;
+            font-family: monospace;
+            font-size: 0.85rem;
+        }
+        a {
+            color: #7dd3fc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .footer {
+            margin-top: 2rem;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #64748b;
+        }
+    </style>
+</head>
+<body>
+<div class="card">
+    <h1>🎵 TikTok Proxy API</h1>
+    <div class="sub">Serverless endpoints to fetch public TikTok profile data</div>
+
+    <div class="endpoint">
+        <span class="badge">GET</span>
+        <h2>📘 Lightweight Profile</h2>
+        <div class="url">/api/tiktok?username=jafernegery</div>
+        <p>Returns selected profile fields: <code>username</code>, <code>display_name</code>, <code>avatar_url</code>, <code>followers</code>, <code>following</code>, <code>total_likes</code>, <code>total_videos</code>.<br>
+        <strong>Use case:</strong> Quick avatar, follower counts, lightweight scraping.</p>
+        <p><a href="/api/tiktok?username=jafernegery" target="_blank">🔍 Try it →</a></p>
+    </div>
+
+    <div class="endpoint">
+        <span class="badge">GET</span>
+        <h2>📦 Full User Detail</h2>
+        <div class="url">/api/tiktokFull?username=jafernegery</div>
+        <p>Returns the complete <code>webapp.user-detail</code> object from TikTok's internal data, including <code>userInfo.user</code>, <code>userInfo.stats</code>, and every available field.<br>
+        <strong>Use case:</strong> Full data extraction, deep analysis, bio, links, and more.</p>
+        <p><a href="/api/tiktokFull?username=jafernegery" target="_blank">🔍 Try it →</a></p>
+    </div>
+
+    <div class="endpoint">
+        <h2>📁 Source Code</h2>
+        <p>These endpoints run on <strong>Vercel</strong> serverless functions. You can find the code and deploy your own copy:</p>
+        <ul style="margin-top: 0.5rem; margin-left: 1.5rem;">
+            <li><a href="https://github.com/yourusername/your-repo" target="_blank">GitHub Repository</a> (replace with your actual repo)</li>
+            <li>Endpoint files: <code>api/tiktok.js</code> (lightweight) and <code>api/tiktokFull.js</code> (full data)</li>
+        </ul>
+    </div>
+
+    <div class="footer">
+        ⚡ Powered by Vercel · No authentication required · Respect TikTok's terms
+    </div>
+</div>
+</body>
+</html>
